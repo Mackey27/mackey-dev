@@ -1,4 +1,3 @@
-import "./App.css";
 import Header from "./components/Header";
 import ToggleMode from "./components/ToggleMode";
 import Content from "./components/Content";

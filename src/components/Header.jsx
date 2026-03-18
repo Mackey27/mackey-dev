@@ -1,8 +1,7 @@
-import verifiedCheck from "../assets/svg/verified-check.svg?url";
-import locationIcon from "../assets/svg/location.svg?url";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { FaAngleRight } from "react-icons/fa";
 import { IoIosSend } from "react-icons/io";
+import { MdVerified, MdLocationOn } from "react-icons/md";
 import { personalLinks } from "../constants/personal";
 
 const Header = () => {
@@ -20,15 +19,11 @@ const Header = () => {
         <div className="flex flex-col gap-1">
           <div className="flex flex-col gap-1">
             <h3 className="text-lg lg:text-2xl font-bold flex items-center gap-2 text-gray-900 dark:text-white">
-              Niño Mark Zaspa
-              <img
-                src={verifiedCheck}
-                alt="Verified"
-                className="w-4 h-4 lg:w-5 lg:h-5"
-              />
+              Nino Mark Zaspa
+              <MdVerified className="w-4 h-4 lg:w-5 lg:h-5 text-blue-500" />
             </h3>
             <h5 className="text-xs lg:text-sm text-gray-600 dark:text-gray-400 flex items-center gap-1">
-              <img src={locationIcon} alt="Location" className="w-4 h-4" />
+              <MdLocationOn className="w-4 h-4" />
               Cebu, Philippines
             </h5>
             <h4 className="text-xs lg:text-sm font-medium text-gray-800 dark:text-gray-300 mt-1">
