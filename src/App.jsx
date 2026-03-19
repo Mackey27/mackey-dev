@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
+import FloatingChat from "./components/FloatingChat";
 import { ThemeProvider } from "./components/theme-provider";
 import { Route, Routes } from "react-router-dom";
 import AllStacksPage from "./pages/AllStacksPage";
@@ -42,6 +43,7 @@ function App() {
           </div>
           <Footer />
         </div>
+        <FloatingChat />
       </div>
     </ThemeProvider>
   );
