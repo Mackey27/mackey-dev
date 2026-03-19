@@ -3,6 +3,7 @@ import { FaAngleRight } from "react-icons/fa";
 import { MdVerified, MdLocationOn, MdOutlineEmail } from "react-icons/md";
 import { personalLinks } from "../constants/personal";
 import profileImage from "../assets/5.jpg";
+import ToggleMode from "./ToggleMode";
 
 const Header = () => {
   return (
@@ -52,6 +53,9 @@ const Header = () => {
             </a>
           </div>
         </div>
+      </div>
+      <div className="self-start pt-1">
+        <ToggleMode />
       </div>
     </header>
   );

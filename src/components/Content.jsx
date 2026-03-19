@@ -294,26 +294,25 @@ const Content = () => {
                   key={index}
                   className="pl-2 md:pl-4 basis-full md:basis-1/3 lg:basis-1/5"
                 >
-                  <div className="overflow-hidden rounded-lg aspect-4/5">
+                  <a
+                    href={item.imgSrc}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block overflow-hidden rounded-lg aspect-4/5"
+                  >
                     <img
                       src={item.imgSrc}
                       alt="Gallery item"
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
                     />
-                  </div>
+                  </a>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-4 lg:-left-5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 shadow-md hover:bg-gray-50 dark:hover:bg-gray-700" />
-            <CarouselNext className="hidden md:flex -right-4 lg:-right-5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 shadow-md hover:bg-gray-50 dark:hover:bg-gray-700" />
+            <CarouselPrevious className="-left-2 md:-left-4 lg:-left-5 h-8 w-8 md:h-10 md:w-10 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 shadow-md hover:bg-gray-50 dark:hover:bg-gray-700" />
+            <CarouselNext className="-right-2 md:-right-4 lg:-right-5 h-8 w-8 md:h-10 md:w-10 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 shadow-md hover:bg-gray-50 dark:hover:bg-gray-700" />
           </Carousel>
 
-          {/* Mobile navigation dots or swipe indicator */}
-          <div className="flex justify-center mt-4 md:hidden">
-            <p className="text-xs text-gray-500 dark:text-gray-400">
-              Swipe to see more {"->"}
-            </p>
-          </div>
         </div>
       </div>
     </div>
