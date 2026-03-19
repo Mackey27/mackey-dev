@@ -125,3 +125,19 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Force all text to black as requested */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+button,
+li,
+label {
+  color: #000 !important;
+}

@@ -3,13 +3,22 @@ export const frontEndStacks = [
     name: "Javascript",
   },
   {
-    name: "TypeScript",
+    name: "HTML5",
+  },
+  {
+    name: "CSS3",
   },
   {
     name: "React",
   },
   {
     name: "Vue.js",
+  },
+  {
+    name: "Vite",
+  },
+  {
+    name: "Bootstrap",
   },
   {
     name: "Tailwind CSS",
@@ -24,10 +33,13 @@ export const backEndStacks = [
     name: "PHP",
   },
   {
-    name: "MongoDB",
+    name: "Laravel",
   },
   {
     name: "MySQL",
+  },
+  {
+    name: "Rest API",
   },
 ];
 
@@ -40,9 +52,6 @@ export const otherStacks = [
   },
   {
     name: "Git",
-  },
-  {
-    name: "AWS",
   },
   {
     name: "Github Actions",

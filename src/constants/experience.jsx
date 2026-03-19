@@ -1,19 +1,19 @@
 export const experienceData = [
   {
-    companyName: "Internship at Santa Fe National High School",
-    jobTitle: "SFNHS SSLG Voting System",
+    companyName: "Internship",
+    jobTitle: "Santa Fe National High School",
     date: "2026",
     current: false,
   },
   {
     companyName: "Madridejos Community College",
-    jobTitle: "Bachelor of Science in Information Technology",
+    jobTitle: "BS Information Technology",
     date: "2026",
     current: false,
   },
   {
-    companyName: "Hello World!",
-    jobTitle: "Wrote my first line of code",
+    companyName: "Wrote my first line of code",
+    jobTitle: "Hello World!",
     date: "2022",
     current: false,
   },

@@ -1,16 +1,46 @@
 import Header from "./components/Header";
 import ToggleMode from "./components/ToggleMode";
 import Content from "./components/Content";
+import Footer from "./components/Footer";
 import { ThemeProvider } from "./components/theme-provider";
+import { Route, Routes } from "react-router-dom";
+import AllStacksPage from "./pages/AllStacksPage";
+import AllProjectsPage from "./pages/AllProjectsPage";
 
 function App() {
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       <div className="flex flex-col min-h-screen w-full items-center bg-background text-foreground">
         <div className="w-full max-w-5xl px-4 sm:px-6 lg:px-8 xl:px-4">
-          <Header />
-          <ToggleMode />
-          <Content />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Header />
+                  <ToggleMode />
+                  <Content />
+                </>
+              }
+            />
+            <Route
+              path="/stacks"
+              element={
+                <>
+                  <AllStacksPage />
+                </>
+              }
+            />
+            <Route
+              path="/projects"
+              element={
+                <>
+                  <AllProjectsPage />
+                </>
+              }
+            />
+          </Routes>
+          <Footer />
         </div>
       </div>
     </ThemeProvider>

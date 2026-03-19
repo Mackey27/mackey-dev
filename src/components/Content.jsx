@@ -20,8 +20,16 @@ import {
 import { galleryData } from "../constants/gallery";
 import { HiOutlinePhotograph } from "react-icons/hi";
 import { socialLinks } from "../constants/socials";
+import { useNavigate } from "react-router-dom";
 
 const Content = () => {
+  const navigate = useNavigate();
+
+  const visibleFrontEndStacks = frontEndStacks.slice(0, 3);
+  const visibleBackEndStacks = backEndStacks.slice(0, 3);
+  const visibleOtherStacks = otherStacks.slice(0, 3);
+  const visibleProjects = projects.slice(0, 4);
+
   return (
     <div className="w-full h-auto mt-6 lg:mt-8 flex flex-col gap-5 lg:gap-6 pb-8 xl:px-16">
       {/* Row 1: About + Experience Grid */}
@@ -36,26 +44,23 @@ const Content = () => {
 
             <div className="flex flex-col gap-3 mt-4">
               <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-                I am a BSIT graduate and a passionate Web Developer who enjoys
-                building modern, resposive, and use-focused web applications and
-                websites. I have hands-on experience working with Vue.js, React,
-                Node.js, TypeScript, and modern web technologies, and I
-                continuously strive to improve my skills by exploring new tools,
-                frameworks, and best practices in web development.
+               I am a graduating BSIT student and a passionate Web Developer 
+               who enjoys building modern, responsive, and user-focused web applications
+               and websites. I have hands-on experience working with Vue.js, React, Node.js, 
+               Laravel, PHP, and other modern web technologies, and I continuously strive to 
+               improve my skills by exploring new tools, frameworks, and best practices in web development.
               </p>
 
               <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-                During my college years, I actively parcipated in website and
-                web design competitions, where i honed my problem-solving
-                skills, creativity and teamwork, while also pushing me to write
-                clean, efficient, and maintainable code.
+                Throughout my college years, I took part in multiple web development and design competitions, 
+                enhancing my problem-solving abilities, creativity, and teamwork, while reinforcing my ability 
+                to write clean, efficient, and maintainable code.
               </p>
 
               <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-                I am driven by a strong passion for learning, building
-                meaningful projects, and turning ideas into functional digital
-                experiences. My goal is to grow as developer while contributing
-                to impactful projects that solve real world problems.
+                I am passionate about continuous learning, building meaningful projects, and transforming ideas 
+                into functional digital solutions. My goal is to grow as a developer while contributing to 
+                projects that create real-world impact.
               </p>
             </div>
           </div>
@@ -114,9 +119,13 @@ const Content = () => {
             <HiOutlineBeaker className="w-4 h-4 text-gray-600 dark:text-gray-400" />
             Tech Stack
           </h3>
-          <span className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 cursor-pointer">
-            View All →
-          </span>
+          <button
+            type="button"
+            onClick={() => navigate("/stacks")}
+            className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 cursor-pointer"
+          >
+            View All {"->"}
+          </button>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -126,7 +135,7 @@ const Content = () => {
               Frontend
             </h4>
             <div className="flex flex-wrap gap-2">
-              {frontEndStacks.map((stack, index) => (
+              {visibleFrontEndStacks.map((stack, index) => (
                 <div
                   key={index}
                   className="text-xs py-1.5 px-3 border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-gray-800 dark:text-gray-200"
@@ -143,7 +152,7 @@ const Content = () => {
               Backend
             </h4>
             <div className="flex flex-wrap gap-2">
-              {backEndStacks.map((stack, index) => (
+              {visibleBackEndStacks.map((stack, index) => (
                 <div
                   key={index}
                   className="text-xs py-1.5 px-3 border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-gray-800 dark:text-gray-200"
@@ -157,10 +166,10 @@ const Content = () => {
           {/* DevOps & Cloud */}
           <div>
             <h4 className="text-sm text-gray-800 dark:text-gray-200 font-medium mb-3">
-              DevOps & Cloud
+              Developer Tools
             </h4>
             <div className="flex flex-wrap gap-2">
-              {otherStacks.map((stack, index) => (
+              {visibleOtherStacks.map((stack, index) => (
                 <div
                   key={index}
                   className="text-xs py-1.5 px-3 border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-gray-800 dark:text-gray-200"
@@ -209,7 +218,7 @@ const Content = () => {
               Beyond Coding
             </h3>
             <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-              When not writing code, I enjoy staying active and entertained. I'm
+              When not writing code, I enjoy staying active and entertained. I&apos;m
               passionate about{" "}
               <span className="text-blue-600 dark:text-blue-400 hover:underline cursor-pointer">
                 jogging
@@ -234,13 +243,17 @@ const Content = () => {
                 <HiOutlineFolderOpen className="w-4 h-4 text-gray-600 dark:text-gray-400" />
                 Recent Projects
               </h3>
-              <span className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 cursor-pointer">
-                View All →
-              </span>
+              <button
+                type="button"
+                onClick={() => navigate("/projects")}
+                className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 cursor-pointer"
+              >
+                View All {"->"}
+              </button>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {projects.slice(0, 4).map((project, index) => (
+              {visibleProjects.map((project, index) => (
                 <div
                   key={index}
                   className="border border-gray-200 dark:border-gray-700 rounded-lg p-3 hover:border-gray-300 dark:hover:border-gray-600 hover:shadow-sm transition-all cursor-pointer bg-white dark:bg-gray-800"
@@ -298,7 +311,7 @@ const Content = () => {
           {/* Mobile navigation dots or swipe indicator */}
           <div className="flex justify-center mt-4 md:hidden">
             <p className="text-xs text-gray-500 dark:text-gray-400">
-              Swipe to see more →
+              Swipe to see more {"->"}
             </p>
           </div>
         </div>

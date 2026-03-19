@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithub, FaInstagram, FaFacebook } from "react-icons/fa";
 export const socialLinks = [
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/rogel-gerodiaz-4732761b6/",
+    url: "https://www.linkedin.com/in/ni%C3%B1o-mark-zaspa-8312b8395/",
     icon: FaLinkedin,
   },
   {
