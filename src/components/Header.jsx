@@ -7,17 +7,17 @@ import ToggleMode from "./ToggleMode";
 
 const Header = () => {
   return (
-    <header className="w-full h-auto flex justify-between items-center pt-8 lg:pt-12 xl:px-16">
-      <div className="flex gap-4 lg:gap-6">
+    <header className="w-full h-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pt-8 lg:pt-12 xl:px-16">
+      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 lg:gap-6 w-full">
         <div className="shrink-0">
           <img
             src={profileImage}
             alt="Profile"
-            className="size-24 lg:size-28 xl:size-32 aspect-square rounded-lg object-cover object-center"
+            className="mx-auto sm:mx-0 size-20 sm:size-24 lg:size-28 xl:size-32 aspect-square rounded-lg object-cover object-center"
           />
         </div>
 
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 w-full">
           <div className="flex flex-col gap-1">
             <h3 className="text-lg lg:text-2xl font-bold flex items-center gap-2 text-gray-900 dark:text-white">
               Niño Mark Zaspa
@@ -33,7 +33,7 @@ const Header = () => {
               Developer \ Content Creator
             </h4>
           </div>
-          <div className="flex mt-3 gap-2">
+          <div className="flex flex-wrap items-center mt-3 gap-2">
             <a
               href={personalLinks.resume}
               target="_blank"
@@ -54,7 +54,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="self-start pt-1">
+      <div className="self-end sm:self-start pt-1">
         <ToggleMode />
       </div>
     </header>
