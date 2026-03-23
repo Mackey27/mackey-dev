@@ -9,11 +9,11 @@ const Header = () => {
   return (
     <header className="w-full h-auto flex justify-between items-center pt-8 lg:pt-12 xl:px-16">
       <div className="flex gap-4 lg:gap-6">
-        <div>
+        <div className="shrink-0">
           <img
             src={profileImage}
             alt="Profile"
-            className="w-36 h-36 sm:w-24 sm:h-24 lg:w-28 lg:h-28 xl:w-38 xl:h-38 shrink-0 aspect-square rounded-lg object-cover object-center"
+            className="size-24 lg:size-28 xl:size-32 aspect-square rounded-lg object-cover object-center"
           />
         </div>
 

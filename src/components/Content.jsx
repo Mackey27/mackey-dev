@@ -52,12 +52,6 @@ const Content = () => {
               </p>
 
               <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-                Throughout my college years, I took part in multiple web development and design competitions, 
-                enhancing my problem-solving abilities, creativity, and teamwork, while reinforcing my ability 
-                to write clean, efficient, and maintainable code.
-              </p>
-
-              <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
                 I am passionate about continuous learning, building meaningful projects, and transforming ideas 
                 into functional digital solutions. My goal is to grow as a developer while contributing to 
                 projects that create real-world impact.
