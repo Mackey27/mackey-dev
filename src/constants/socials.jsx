@@ -1,4 +1,5 @@
 import { FaLinkedin, FaGithub, FaInstagram, FaFacebook } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa6";
 
 export const socialLinks = [
   {
@@ -20,5 +21,10 @@ export const socialLinks = [
     name: "Facebook",
     url: "https://www.facebook.com/mack3yyy",
     icon: FaFacebook,
-  }
+  },
+  {
+    name: "TikTok",
+    url: "https://www.tiktok.com/@mack3yyy",
+    icon: FaTiktok,
+  },
 ];
