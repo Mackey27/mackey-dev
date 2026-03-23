@@ -1,6 +1,6 @@
-import { IoNewspaperOutline } from "react-icons/io5";
+import { IoLocationOutline, IoNewspaperOutline } from "react-icons/io5";
 import { FaAngleRight } from "react-icons/fa";
-import { MdVerified, MdLocationOn, MdOutlineEmail } from "react-icons/md";
+import { MdVerified, MdOutlineEmail } from "react-icons/md";
 import { personalLinks } from "../constants/personal";
 import profileImage from "../assets/5.jpg";
 import ToggleMode from "./ToggleMode";
@@ -24,7 +24,7 @@ const Header = () => {
               <MdVerified className="w4 h-4 lg:w-5 lg:h-5 text-blue-500" />
             </h3>
             <h5 className="text-xs lg:text-sm text-gray-600 dark:text-gray-400 flex items-center gap-1">
-              <MdLocationOn className="w-4 h-4" />
+              <IoLocationOutline className="w-4 h-4" />
               Cebu, Philippines
             </h5>
             <h4 className="text-xs lg:text-sm font-medium text-gray-800 dark:text-gray-300 mt-1">

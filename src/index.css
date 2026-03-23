@@ -1,10 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap");
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 * {
-  font-family: "Geist", sans-serif;
+  font-family: "Sora", "Geist", sans-serif;
 }
 
 @theme inline {

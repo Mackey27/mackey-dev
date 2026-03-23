@@ -46,9 +46,16 @@ const Content = () => {
               <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
                I am a graduating BSIT student and a passionate Web Developer 
                who enjoys building modern, responsive, and user-focused web applications
-               and websites. I have hands-on experience working with Vue.js, React, Node.js, 
+               and websites. I have hands-on experience working with Vue.js, React, 
                Laravel, PHP, and other modern web technologies, and I continuously strive to 
                improve my skills by exploring new tools, frameworks, and best practices in web development.
+              </p>
+
+              <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                I also enjoy working on personal and academic projects that allow me to apply my knowledge 
+                in real-world scenarios. Through these projects, I continue to improve my problem-solving skills, 
+                code quality, and ability to design user-friendly interfaces while collaborating and learning from 
+                the development community.
               </p>
 
               <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
@@ -118,7 +125,7 @@ const Content = () => {
             onClick={() => navigate("/stacks")}
             className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 cursor-pointer"
           >
-            View All {"->"}
+            View All {">"}
           </button>
         </div>
 
@@ -242,7 +249,7 @@ const Content = () => {
                 onClick={() => navigate("/projects")}
                 className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 cursor-pointer"
               >
-                View All {"->"}
+                View All {">"}
               </button>
             </div>
 
