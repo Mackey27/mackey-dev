@@ -285,6 +285,8 @@ const Content = () => {
           <Carousel
             opts={{
               align: "start",
+              containScroll: "trimSnaps",
+              duration: 18,
             }}
             className="w-full"
           >
@@ -303,6 +305,8 @@ const Content = () => {
                     <img
                       src={item.imgSrc}
                       alt="Gallery item"
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
                     />
                   </a>
