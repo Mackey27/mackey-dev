@@ -92,7 +92,7 @@ const FloatingChat = () => {
                 {msg.role === "assistant" ? (
                   <img
                     src={profileImage}
-                    alt="Mackey AI"
+                    alt="Mackey"
                     className="w-6 h-6 rounded-full object-cover border border-gray-200 dark:border-gray-700"
                   />
                 ) : null}
@@ -130,7 +130,7 @@ const FloatingChat = () => {
               onKeyDown={(e) => {
                 if (e.key === "Enter") sendMessage();
               }}
-              placeholder="Ask Mackey AI..."
+              placeholder="Ask Mackey..."
               className="flex-1 h-9 px-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-950 text-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-black"
             />
             <button

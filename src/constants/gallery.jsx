@@ -1,4 +1,3 @@
-import gallery1 from "../assets/images/gallery/1.jpg";
 import gallery2 from "../assets/images/gallery/2.jpg";
 import gallery3 from "../assets/images/gallery/3.jpg";
 import gallery4 from "../assets/images/gallery/4.jpg";
@@ -9,7 +8,6 @@ import gallery8 from "../assets/images/gallery/8.jpg";
 import gallery9 from "../assets/images/gallery/9.png";
 
 export const galleryData = [
-  { imgSrc: gallery1 },
   { imgSrc: gallery2 },
   { imgSrc: gallery3 },
   { imgSrc: gallery4 },
