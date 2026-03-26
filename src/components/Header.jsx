@@ -33,13 +33,13 @@ const Header = () => {
             </h4>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2.5 lg:gap-3 mt-2 sm:mt-3">
+          <div className="flex items-center gap-2 sm:gap-3 mt-2 sm:mt-3">
             <a
               href={personalLinks.resume}
               target="_blank"
               rel="noopener noreferrer"
               download="NINO MARK ZASPA.pdf"
-              className="h-9 px-3.5 lg:px-4 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium text-xs lg:text-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors inline-flex items-center justify-center gap-2 whitespace-nowrap"
+              className="h-9 px-3 sm:px-3.5 lg:px-4 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium text-[11px] sm:text-xs lg:text-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors inline-flex items-center justify-center gap-1.5 sm:gap-2 whitespace-nowrap"
             >
               <IoNewspaperOutline className="w-3 h-3 lg:w-4 lg:h-4" />
               Resume
@@ -47,7 +47,7 @@ const Header = () => {
             </a>
             <a
               href={personalLinks.email}
-              className="h-9 px-3.5 lg:px-4 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium text-xs lg:text-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors inline-flex items-center justify-center gap-2 whitespace-nowrap"
+              className="h-9 px-3 sm:px-3.5 lg:px-4 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium text-[11px] sm:text-xs lg:text-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors inline-flex items-center justify-center gap-1.5 sm:gap-2 whitespace-nowrap"
             >
               <MdOutlineEmail className="w-4 h-4" />
               Send Email
