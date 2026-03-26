@@ -8,7 +8,7 @@ import ToggleMode from "./ToggleMode";
 const Header = () => {
   return (
     <header className="w-full h-auto flex justify-between items-start gap-3 pt-8 lg:pt-12 xl:px-16">
-      <div className="flex items-start gap-3 sm:gap-4 lg:gap-5 w-full min-w-0">
+      <div className="flex items-stretch gap-3 sm:gap-4 lg:gap-5 w-full min-w-0">
         <div className="shrink-0">
           <img
             src={profileImage}
@@ -17,7 +17,7 @@ const Header = () => {
           />
         </div>
 
-        <div className="flex flex-col justify-center gap-1.5 w-full min-w-0 min-h-[6rem] sm:min-h-[7rem] lg:min-h-[8rem]">
+        <div className="flex flex-col justify-between gap-1.5 w-full min-w-0 min-h-[6rem] sm:min-h-[7rem] lg:min-h-[8rem]">
           <div className="flex flex-col gap-1">
             <h3 className="text-lg lg:text-2xl font-bold flex items-center gap-2 text-gray-900 dark:text-white">
               Nino Mark Zaspa
@@ -33,7 +33,7 @@ const Header = () => {
             </h4>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2.5 lg:gap-3 mt-3">
+          <div className="flex flex-wrap items-center gap-2.5 lg:gap-3 mt-2 sm:mt-3">
             <a
               href={personalLinks.resume}
               target="_blank"
