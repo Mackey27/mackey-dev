@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { HiOutlineBriefcase } from "react-icons/hi2";
 import { experienceData } from "../constants/experience";
 import { HiOutlineBeaker } from "react-icons/hi";
@@ -29,6 +30,13 @@ const Content = () => {
   const visibleBackEndStacks = backEndStacks.slice(0, 3);
   const visibleOtherStacks = otherStacks.slice(0, 3);
   const visibleProjects = projects.slice(0, 4);
+  const galleryCarouselOptions = useMemo(
+    () => ({
+      align: "start",
+      containScroll: "trimSnaps",
+    }),
+    []
+  );
 
   return (
     <div className="w-full h-auto mt-6 lg:mt-8 flex flex-col gap-5 lg:gap-6 pb-8 xl:px-16">
@@ -284,11 +292,7 @@ const Content = () => {
 
         <div className="relative">
           <Carousel
-            opts={{
-              align: "start",
-              containScroll: "trimSnaps",
-              duration: 18,
-            }}
+            opts={galleryCarouselOptions}
             className="w-full"
           >
             <CarouselContent className="-ml-2 md:-ml-4">

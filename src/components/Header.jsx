@@ -38,6 +38,7 @@ const Header = () => {
               href={personalLinks.resume}
               target="_blank"
               rel="noopener noreferrer"
+              download="NIÑO MARK ZASPA.pdf"
               className="h-8 lg:h-9 px-3 lg:px-4 border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-medium text-xs lg:text-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors flex items-center gap-2 whitespace-nowrap"
             >
               <IoNewspaperOutline className="w-3 h-3 lg:w-4 lg:h-4" />

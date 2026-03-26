@@ -1,4 +1,4 @@
 export const personalLinks = {
-  resume: "", // Replace with your actual resume URL
+  resume: "/NI%C3%91O%20MARK%20ZASPA.pdf",
   email: "mailto:ninomarkzaspa27@gmail.com", 
 };
