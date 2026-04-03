@@ -13,7 +13,7 @@ const Header = () => {
           <img
             src={profileImage}
             alt="Profile"
-            className="size-32 sm:size-36 lg:size-40 xl:size-50 rounded-lg object-cover object-center"
+            className="size-32 sm:size-36 lg:size-32 xl:size-38 rounded-xl object-cover object-center"
           />
         </div>
 
