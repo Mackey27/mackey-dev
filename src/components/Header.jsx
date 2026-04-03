@@ -8,12 +8,12 @@ import ToggleMode from "./ToggleMode";
 const Header = () => {
   return (
     <header className="w-full h-auto flex justify-between items-start gap-3 pt-8 lg:pt-12 xl:px-16">
-      <div className="flex items-stretch gap-3 sm:gap-4 lg:gap-5 w-full min-w-0">
+      <div className="flex items-end gap-3 sm:gap-4 lg:gap-5 w-full min-w-0">
         <div className="shrink-0">
           <img
             src={profileImage}
             alt="Profile"
-            className="size-24 sm:size-28 lg:size-32 xl:size-36 rounded-lg object-cover object-center"
+            className="size-32 sm:size-36 lg:size-40 xl:size-50 rounded-lg object-cover object-center"
           />
         </div>
 
