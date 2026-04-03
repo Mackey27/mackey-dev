@@ -28,7 +28,7 @@ const Header = () => {
               Cebu, Philippines
             </h5>
             <h4 className="text-xs lg:text-sm font-medium text-gray-800 dark:text-gray-300 mt-1">
-              Aspiring Front-end Developer <span className="text-gray-400 dark:text-gray-500">\</span> Web
+              <span className="text-gray-400 dark:text-gray-500"></span> Web
               Developer <span className="text-gray-400 dark:text-gray-500">\</span> Content Creator
             </h4>
           </div>
