@@ -136,10 +136,10 @@ const FloatingChat = () => {
             <button
               type="button"
               onClick={sendMessage}
-              className="h-9 w-9 rounded-md bg-black hover:bg-gray-900 text-white flex items-center justify-center"
+              className="h-10 w-10 rounded-full border border-slate-900/10 bg-[linear-gradient(135deg,#1f2937,#020617)] shadow-[0_10px_24px_rgba(15,23,42,0.28)] hover:scale-105 hover:shadow-[0_14px_30px_rgba(15,23,42,0.34)] active:scale-100 transition-all duration-200 flex items-center justify-center"
               aria-label="Send message"
             >
-              <IoSend className="w-4 h-4" />
+              <IoSend className="w-4 h-4 text-white" />
             </button>
           </div>
         </div>
@@ -148,11 +148,11 @@ const FloatingChat = () => {
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
-        className="mt-3 ml-auto h-9 px-3 rounded-sm bg-[#0b0b0f] hover:bg-black !text-white border border-white/10 shadow-[0_8px_20px_rgba(0,0,0,0.35)] flex items-center gap-1.5"
+        className="mt-3 ml-auto min-h-11 px-4 rounded-full bg-white hover:bg-gray-50 border border-gray-200 shadow-[0_10px_30px_rgba(15,23,42,0.12)] flex items-center gap-2 text-black"
         aria-label="Open chat with Mackey"
       >
-        <IoChatbubbleEllipsesOutline className="w-4 h-4 !text-white" />
-        <span className="text-[11px] font-semibold leading-none whitespace-nowrap !text-white">
+        <IoChatbubbleEllipsesOutline className="w-4 h-4 text-black shrink-0" />
+        <span className="text-xs font-semibold leading-none whitespace-nowrap text-black">
           Chat with Mackey
         </span>
       </button>
