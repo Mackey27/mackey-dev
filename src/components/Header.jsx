@@ -56,7 +56,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="self-start pt-1">
+      <div className="hidden sm:block self-start pt-1">
         <ToggleMode />
       </div>
     </header>
