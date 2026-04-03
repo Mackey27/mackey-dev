@@ -7,7 +7,11 @@ import ToggleMode from "./ToggleMode";
 
 const Header = () => {
   return (
-    <header className="w-full h-auto flex justify-between items-start gap-3 pt-8 lg:pt-12 xl:px-16">
+    <header className="w-full h-auto flex flex-col gap-4 pt-8 lg:gap-5 lg:pt-12 xl:px-16">
+      <div className="flex w-full justify-end">
+        <ToggleMode />
+      </div>
+
       <div className="flex items-end gap-3 sm:gap-4 lg:gap-5 w-full min-w-0">
         <div className="shrink-0">
           <img
@@ -54,10 +58,6 @@ const Header = () => {
             </a>
           </div>
         </div>
-      </div>
-
-      <div className="hidden sm:block self-start pt-1">
-        <ToggleMode />
       </div>
     </header>
   );
