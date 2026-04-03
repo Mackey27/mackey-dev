@@ -256,7 +256,7 @@ const Content = () => {
               </span>
               ,{" "}
               <span className="text-blue-600 dark:text-blue-400 hover:underline cursor-pointer">
-                basketball
+                Football
               </span>
               , and{" "}
               <span className="text-blue-600 dark:text-blue-400 hover:underline cursor-pointer">

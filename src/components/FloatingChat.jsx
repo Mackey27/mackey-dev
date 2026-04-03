@@ -15,7 +15,7 @@ const FloatingChat = () => {
   const [messages, setMessages] = useState([
     {
       role: "assistant",
-      content: "Hello! I'm Mackey AI. Ask me anything about this portfolio.",
+      content: "Hello! I'm Mackey. Ask me anything about this portfolio.",
     },
   ]);
 
