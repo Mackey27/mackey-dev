@@ -1,9 +1,10 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { HiOutlineBriefcase } from "react-icons/hi2";
 import { experienceData } from "../constants/experience";
 import { HiOutlineBeaker } from "react-icons/hi";
 import { HiOutlineFolderOpen } from "react-icons/hi";
 import { IoIosLink } from "react-icons/io";
+import { IoCloseOutline } from "react-icons/io5";
 import { MdOutlineVideoLibrary } from "react-icons/md";
 import {
   backEndStacks,
@@ -25,6 +26,7 @@ import { useNavigate } from "react-router-dom";
 
 const Content = () => {
   const navigate = useNavigate();
+  const [selectedGalleryImage, setSelectedGalleryImage] = useState(null);
 
   const visibleFrontEndStacks = frontEndStacks.slice(0, 3);
   const visibleBackEndStacks = backEndStacks.slice(0, 3);
@@ -37,6 +39,26 @@ const Content = () => {
     }),
     []
   );
+
+  useEffect(() => {
+    if (!selectedGalleryImage) return undefined;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setSelectedGalleryImage(null);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedGalleryImage]);
 
   return (
     <div className="w-full h-auto mt-6 lg:mt-8 flex flex-col gap-5 lg:gap-6 pb-8 xl:px-16">
@@ -301,20 +323,19 @@ const Content = () => {
                   key={index}
                   className="pl-2 md:pl-4 basis-full md:basis-1/3 lg:basis-1/5"
                 >
-                  <a
-                    href={item.imgSrc}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <button
+                    type="button"
+                    onClick={() => setSelectedGalleryImage(item.imgSrc)}
                     className="block overflow-hidden rounded-lg aspect-4/5"
                   >
                     <img
                       src={item.imgSrc}
-                      alt="Gallery item"
+                      alt={`Gallery item ${index + 1}`}
                       loading="lazy"
                       decoding="async"
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
                     />
-                  </a>
+                  </button>
                 </CarouselItem>
               ))}
             </CarouselContent>
@@ -324,6 +345,33 @@ const Content = () => {
 
         </div>
       </div>
+
+      {selectedGalleryImage ? (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 px-4 py-6 backdrop-blur-sm"
+          onClick={() => setSelectedGalleryImage(null)}
+        >
+          <div
+            className="relative w-full max-w-5xl"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setSelectedGalleryImage(null)}
+              className="absolute right-3 top-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/95 text-slate-900 shadow-lg transition-colors hover:bg-white"
+              aria-label="Close gallery image"
+            >
+              <IoCloseOutline className="h-6 w-6" />
+            </button>
+
+            <img
+              src={selectedGalleryImage}
+              alt="Expanded gallery item"
+              className="max-h-[85vh] w-full rounded-2xl object-contain shadow-2xl"
+            />
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 };
