@@ -3,7 +3,7 @@ import { IoChatbubbleEllipsesOutline, IoCloseOutline, IoSend } from "react-icons
 import profileImage from "../assets/5.jpg";
 
 const defaultReplies = [
-  "Hi! I'm Mackey AI. I can help you explore this portfolio.",
+  "Hi! I'm Mackey. I can help you explore this portfolio.",
   "You can ask about projects, stacks, or contact details.",
   "Try asking: 'Show your frontend stack' or 'How can I contact Mackey?'",
 ];

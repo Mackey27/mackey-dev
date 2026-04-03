@@ -7,11 +7,7 @@ import ToggleMode from "./ToggleMode";
 
 const Header = () => {
   return (
-    <header className="w-full h-auto flex flex-col gap-4 pt-8 lg:gap-5 lg:pt-12 xl:px-16">
-      <div className="flex w-full justify-end">
-        <ToggleMode />
-      </div>
-
+    <header className="w-full h-auto pt-8 lg:pt-12 xl:px-16">
       <div className="flex items-end gap-3 sm:gap-4 lg:gap-5 w-full min-w-0">
         <div className="shrink-0">
           <img
@@ -23,10 +19,16 @@ const Header = () => {
 
         <div className="flex flex-col justify-between gap-1.5 w-full min-w-0 min-h-[6rem] sm:min-h-[7rem] lg:min-h-[8rem]">
           <div className="flex flex-col gap-1">
-            <h3 className="text-lg lg:text-2xl font-bold flex items-center gap-2 text-gray-900 dark:text-white">
-              Nino Mark Zaspa
-              <MdVerified className="w-4 h-4 lg:w-5 lg:h-5 text-blue-500" />
-            </h3>
+            <div className="flex items-start justify-between gap-3">
+              <h3 className="text-lg lg:text-2xl font-bold flex items-center gap-2 text-gray-900 dark:text-white min-w-0">
+                <span className="truncate sm:hidden">Mackey Zaspa</span>
+                <span className="hidden truncate sm:inline">Nino Mark Zaspa</span>
+                <MdVerified className="w-4 h-4 lg:w-5 lg:h-5 text-blue-500 shrink-0" />
+              </h3>
+              <div className="shrink-0 pt-0.5">
+                <ToggleMode />
+              </div>
+            </div>
             <h5 className="text-xs lg:text-sm text-gray-600 dark:text-gray-400 flex items-center gap-1">
               <IoLocationOutline className="w-4 h-4" />
               Cebu, Philippines
