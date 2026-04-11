@@ -2,12 +2,12 @@ import { IoLocationOutline, IoNewspaperOutline } from "react-icons/io5";
 import { FaAngleRight } from "react-icons/fa";
 import { MdVerified, MdOutlineEmail } from "react-icons/md";
 import { personalLinks } from "../constants/personal";
-import profileImage from "../assets/5.jpg";
+import profileImage from "../assets/5.webp";
 import ToggleMode from "./ToggleMode";
 
 const Header = () => {
   return (
-    <header className="w-full h-auto pt-8 lg:pt-12 xl:px-16">
+    <header className="page-load page-load-delay-0 w-full h-auto pt-8 lg:pt-12 xl:px-16">
       <div className="flex items-end gap-3 sm:gap-4 lg:gap-5 w-full min-w-0">
         <div className="shrink-0">
           <img

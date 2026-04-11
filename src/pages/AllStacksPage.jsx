@@ -11,7 +11,7 @@ const AllStacksPage = () => {
 
   return (
     <div className="w-full h-auto mt-6 lg:mt-8 pb-8 xl:px-16">
-      <div className="border border-gray-200 dark:border-gray-700 py-5 px-5 rounded-xl bg-white dark:bg-gray-900">
+      <div className="page-load page-load-delay-1 border-b border-gray-200 dark:border-gray-700 py-5 px-5 rounded-xl bg-white dark:bg-gray-900">
         <div className="flex items-center justify-between mb-6">
           <h3 className="text-md font-semibold flex items-center gap-2 text-gray-900 dark:text-white">
             <HiOutlineBeaker className="w-4 h-4 text-gray-600 dark:text-gray-400" />
@@ -20,7 +20,7 @@ const AllStacksPage = () => {
           <button
             type="button"
             onClick={() => navigate("/")}
-            className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 flex items-center gap-1"
+            className="text-sm text-gray-900 dark:text-gray-100 hover:text-gray-600 dark:hover:text-gray-300 flex items-center gap-1 transition-colors"
           >
             <HiOutlineArrowLeft className="w-4 h-4" />
             Back

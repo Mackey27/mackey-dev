@@ -36,6 +36,9 @@ export const backEndStacks = [
     name: "Laravel",
   },
   {
+    name: "firebase",
+  },
+  {
     name: "MySQL",
   },
   {
@@ -55,6 +58,9 @@ export const otherStacks = [
   },
   {
     name: "Github Actions",
+  },
+  {
+    name: "Discord",
   },
 ];
 

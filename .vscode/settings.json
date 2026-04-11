@@ -1,5 +1,55 @@
 {
   "css.lint.unknownAtRules": "ignore",
   "scss.lint.unknownAtRules": "ignore",
-  "less.lint.unknownAtRules": "ignore"
+  "less.lint.unknownAtRules": "ignore",
+  "json.schemas": [
+    {
+      "fileMatch": ["/jsconfig.json"],
+      "schema": {
+        "type": "object",
+        "properties": {
+          "compilerOptions": {
+            "type": "object",
+            "properties": {
+              "target": {
+                "type": "string"
+              },
+              "module": {
+                "type": "string"
+              },
+              "moduleResolution": {
+                "type": "string"
+              },
+              "jsx": {
+                "type": "string"
+              },
+              "paths": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "additionalProperties": true
+          },
+          "include": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "exclude": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  ]
 }

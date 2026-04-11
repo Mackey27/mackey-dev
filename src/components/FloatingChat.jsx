@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { IoChatbubbleEllipsesOutline, IoCloseOutline, IoSend } from "react-icons/io5";
-import profileImage from "../assets/5.jpg";
+import profileImage from "../assets/5.webp";
 
 const defaultReplies = [
   "Hi! I'm Mackey. I can help you explore this portfolio.",
